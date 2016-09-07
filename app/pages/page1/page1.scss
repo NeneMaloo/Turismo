@@ -1,0 +1,20 @@
+.page1 {
+ 
+    #mapa{
+    width: 100%;
+    height: 80%;
+     background-image: url("https://mir-s3-cdn-cf.behance.net/project_modules/hd/adbfe331478863.565560d20d517.jpg");
+    }
+
+   .toolbar-background {
+    	background: #fff; 
+        opacity: 0.1;
+    }
+
+    ion-navbar.toolbar{
+     background-color: #FBF3B1;
+    }
+    ion-header::after, [tabsPlacement="top"] > ion-tabbar::after, ion-footer::before, [tabsPlacement="bottom"] > ion-tabbar::before{
+    	background-image:none; 
+    }
+}
