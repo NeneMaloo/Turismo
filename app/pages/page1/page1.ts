@@ -38,7 +38,7 @@ export class Page1 {
       this.map = new google.maps.Map(this.mapElement.nativeElement, mapOptions);
      
      var marker1 = new google.maps.Marker({ position: punto1, map: this.map, title: 'Hello World!'});
-         marker1.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
+ marker1.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
     
      var marker2 = new google.maps.Marker({ position: punto2, map: this.map, title: 'Hello World!'});
          marker2.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
