@@ -29,3 +29,12 @@
 // App Windows Only Sass
 // --------------------------------------------------
 // CSS that should only apply to the Windows app
+.app .menu-inner{
+  ion-menu[type=reveal].show-menu .menu-inner{
+    background:linear-gradient(to bottom,rgba(39,91,168,1),rgba(33,150,243,1) );
+  }
+}
+
+ion-menu[type=reveal].show-menu .menu-inner{
+  background:linear-gradient(to bottom,rgba(39,91,168,1),rgba(33,150,243,1) );
+}

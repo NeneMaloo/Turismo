@@ -1,10 +1,31 @@
 
+<style>
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+  font-size:x-large;
+}
+.rating > span:before,
+.rating > span:before {
+   content: "\2605";
+   position: absolute;
+   color:gold;
+}
+
+</style>
+
 <ion-header>
   <ion-navbar>
     <button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title>Restaurants</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -12,6 +33,41 @@
 
 
 
-<ion-content padding>
+<ion-content padding class="cont_rest">
+<div id="map" style="width:50%,height: 400px;"></div>
+
+<ion-list>
+
+  <ion-item *ngFor="let restaurant of restaurants" >
+    
+    <ion-thumbnail item-left>
+      <img src="images/restaurant1.jpg" >
+    </ion-thumbnail>
+    
+    <ion-row >
+       
+       <ion-col>
+        <h2>{{restaurant.nombre}} </h2>
+        <p>{{restaurant.ciudad}}</p>
+      </ion-col>
+       
+      <ion-col >
+       
+       <div style="margin-left:15px;">
+          <button clear item-right (click)="navegar(restaurant)">Ver</button>
+          <button clear item-right (click)="openModal(restaurant.altitud,restaurant.latitud,restaurant.nombre)" >Mapa</button>
+          </div> 
+        
+        <ion-row class="rating">
+             <span>☆</span>
+        </ion-row>
+
+       </ion-col>   
+       
+
+    </ion-row>
+  </ion-item>
+</ion-list>
+
 
 </ion-content>
